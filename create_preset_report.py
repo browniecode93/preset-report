@@ -72,8 +72,8 @@ def write_to_csv(user_dataset):
     row = []
     with open('preset-user.csv', 'w') as ofile:
         wr = csv.writer(ofile)
-        wr.writerow(['user','dataset_count','dashboard_count','chart_count', 'data_lake_count', 'factorial_s3_count', 'updated_at'])
-        entities = ['dataset', 'dashboard', 'chart', 'data_lake_count', 'factorial_s3_count']
+        wr.writerow(['user','dataset_count','dashboard_count','chart_count','date'])
+        entities = ['dataset', 'dashboard', 'chart']
         for user in user_dataset:
             row.append(user)
             for ent in entities:
